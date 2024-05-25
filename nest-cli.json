@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/lort/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": false,
+    "tsConfigPath": "apps/lort/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/lort",
+  "projects": {
+    "lort": {
+      "type": "application",
+      "root": "apps/lort",
+      "entryFile": "main",
+      "sourceRoot": "apps/lort/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/lort/tsconfig.app.json"
+      }
+    },
+    "nestor": {
+      "type": "application",
+      "root": "apps/nestor",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestor/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestor/tsconfig.app.json"
+      }
+    },
+    "livraria": {
+      "type": "library",
+      "root": "libs/livraria",
+      "entryFile": "index",
+      "sourceRoot": "libs/livraria/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/livraria/tsconfig.lib.json"
+      }
+    }
+  }
+}
